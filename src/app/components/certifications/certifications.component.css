@@ -1,0 +1,132 @@
+.estudio-titulo {
+    font-family: var(--fuenteGeneral);
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.titulo-estudio {
+    font-family: var(--fuenteGeneral);
+    font-size: 2.5rem;
+    margin: 0;
+
+}
+
+.estudio {
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .estudio {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.estudio:last-of-type {
+    border: none;
+}
+
+.estudio__label {
+    font-family: var(--fuenteGeneral);
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.estudio__info {
+    font-weight: normal;
+    margin: 0;
+
+}
+
+.estudio__label,
+.estudio__info {
+    font-size: 1.5rem;
+    margin: 0;
+
+}
+
+/*Certificados*/
+.certificado-titulo {
+    font-family: var(--fuenteGeneral);
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.titulo-certificado {
+    font-family: var(--fuenteGeneral);
+    font-size: 2.5rem;
+    margin: 0;
+
+}
+
+.certificado {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .certificado {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.certificado:last-of-type {
+    border: none;
+}
+
+.certificado__label {
+    font-family: var(--fuenteGeneral);
+    font-weight: bold;
+    margin: 0;
+
+}
+
+.certificado__info {
+    font-weight: normal;
+    margin: 0;
+
+}
+
+.certificado__label,
+.certificado__info {
+    font-size: 1.5rem;
+    margin: 0;
+
+}
+
+.certificado__link {
+    font-family: var(--fuenteGeneral);
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.imagen-curso {
+    width: 90%;
+    height: auto;
+}
+
+.boton-certificado {
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-left: 0px;
+}
+.btn-descargar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,14 @@
+<!-- components/carrusel/carrusel.component.html -->
+<div class="carousel">
+  @for (img of images; track img.src; let i = $index) {
+    <img 
+      [src]="img.src" 
+      [alt]="img.alt"
+      class="carousel-img"
+      [class.active]="i === currentIndex"
+      loading="lazy"
+    >
+  }
+  <button class="carousel-btn prev" (click)="changeSlide(-1)">⟨</button>
+  <button class="carousel-btn next" (click)="changeSlide(1)">⟩</button>
+</div>

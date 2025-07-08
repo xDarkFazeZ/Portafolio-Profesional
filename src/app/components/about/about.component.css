@@ -1,0 +1,185 @@
+.contenedor-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.columna-derecha {
+    margin-left: -100px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 500px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra);
+}
+
+.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    position: relative;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(44, 62, 80, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(44, 62, 80, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+
+.boton-cv {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-left: -100px;
+}
+
+.btn-descargar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-descargar:hover {
+    background-color: #0056b3;
+}
+
+.informacion-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 10px 10px 10px 10px;
+    margin-left: 100px;
+}
+
+.nombre {
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.titulo-profesional {
+    font-size: 1.3rem;
+    color: var(--color-secundario);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.seccion {
+    margin-bottom: 1.5rem;
+}
+
+.titulo-seccion {
+    font-size: 1.4rem;
+    color: var(--color-primario);
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-accento);
+}
+
+.descripcion {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.objetivos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.objetivos-columna {
+    background-color: rgba(240, 240, 240, 0.7);
+    padding: 1.2rem;
+    border-radius: var(--radio-borde);
+}
+
+.tipo-objetivo {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.lista-objetivos {
+    list-style: none;
+}
+
+.lista-objetivos li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.lista-objetivos li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-accento);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+.boton-cv {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-left: 0px;
+}
+.nombre .titulo-profesional{
+    text-align: center;
+}
+}

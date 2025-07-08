@@ -1,0 +1,13 @@
+<header class="cabecera">
+    <div class="contenedor-cab">
+        <nav class="navegacion">
+            <h1 class="logo">Juan Iram Gámez</h1>
+            <button class="menu-btn" (click)="toggleMenu()" aria-label="Abrir menú">☰</button>
+            <ul class="menu" [class.active]="menuActive">
+                <li><a routerLink="/about" routerLinkActive="active">Acerca de Mi</a></li>
+                <li><a routerLink="/certifications" routerLinkActive="active">Estudios y Certificaciones</a></li>
+                <li><a routerLink="/software" routerLinkActive="active">Habilidades y Software</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,47 @@
+<div class="main-content">
+    <!-- Sección de perfil con carrusel -->
+<div class="profile-carousel">
+    <div class="carrusel-wrapper">
+        <app-carrusel [images]="profileImages" [interval]="8000"></app-carrusel>
+    </div>
+</div>
+
+    <!-- Sección de habilidades -->
+    <section class="skills-container">
+        <h2 class="section-title">Mis Habilidades</h2>
+        <div class="skills-section">
+            @for (skill of skills; track skill.name; let i = $index) {
+            <div class="skill-card" [class.expanded]="expandedSkillIndex === i" (click)="toggleSkill(i)">
+
+                <img [src]="skill.image" [alt]="skill.name" class="skill-image">
+                <img [src]="skill.image" [alt]="skill.name" class="skill-icon">
+                <span class="skill-name">{{skill.name}}</span>
+
+                @if (expandedSkillIndex === i) {
+                <div class="skill-description">
+                    {{skill.description}}
+                </div>
+
+                <div class="skill-close-btn" (click)="$event.stopPropagation(); expandedSkillIndex = null">
+                    ×
+                </div>
+                }
+            </div>
+            }
+        </div>
+    </section>
+
+    <!-- Sección de software -->
+    <section class="software-container">
+        <h2 class="section-title">Software que manejo</h2>
+        <div class="software-section">
+            @for (soft of software; track soft.name) {
+            <div class="software-card">
+                <img [src]="soft.image" [alt]="soft.name" class="software-image">
+                <img [src]="soft.image" [alt]="soft.name" class="software-icon">
+                <span class="software-name">{{soft.name}}</span>
+            </div>
+            }
+        </div>
+    </section>
+</div>
